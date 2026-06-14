@@ -3,7 +3,7 @@
 CREATE TABLE Users (
     user_id SERIAL PRIMARY KEY,
     full_name VARCHAR(100),
-    email VARCHAR(255) ,
+    email VARCHAR(255) UNIQUE,
     role VARCHAR(20) CHECK (role IN ('Football Fan', 'Ticket Manager')),
     phone_number VARCHAR(20)
 );
